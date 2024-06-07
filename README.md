@@ -1,9 +1,7 @@
-
-
-![Logo](https://github.com/AKGanesh/CaliforniaHousing_FeatureEngg_PCA/blob/main/fs.png)
-
+![Logo](https://github.com/AKGanesh/CaliforniaHousing_FeatureEngg_PCA/blob/main/ft.png)
 
 # Feature Engineering on California Housing Dataset
+
 This project tackles predicting California housing prices using machine learning - linear regression in specific. It leverages the scikit-learn library's California housing dataset and explores various feature engineering techniques to optimize model performance. The project implements filter-based methods for feature selection. It also explores dimensionality reduction using Principal Component Analysis (PCA) and incorporates wrapper methods like RFE (Recursive Feature Elimination) and SFE (Sequential Feature Selection)to refine the most influential features for accurate price prediction.
 
 ## Implementation Details
@@ -14,21 +12,22 @@ This project tackles predicting California housing prices using machine learning
 - Output: House Price
 - Feature Engineering techniques used: Filter Based (Mutual Info Regression, Pearson Correlation), Wrapper (Recursive Feature Elimination(RFE), Sequential Feature Selection(SFS)) and Dimensionality Reduction (PCA)
 
-
 ## Dataset details
+
 - Number of Instances: 20640
 
 - Number of Attributes: 8 numeric, predictive attributes and the target
 
 - Attribute Information:
-    - MedInc        median income in block group
-    - HouseAge      median house age in block group
-    - AveRooms      average number of rooms per household
-    - AveBedrms     average number of bedrooms per household
-    - Population    block group population
-    - AveOccup      average number of household members
-    - Latitude      block group latitude
-    - Longitude     block group longitude
+
+  - MedInc median income in block group
+  - HouseAge median house age in block group
+  - AveRooms average number of rooms per household
+  - AveBedrms average number of bedrooms per household
+  - Population block group population
+  - AveOccup average number of household members
+  - Latitude block group latitude
+  - Longitude block group longitude
 
 - Missing Attribute Values: None
 
@@ -45,24 +44,20 @@ It can be downloaded/loaded using the function
 `sklearn.datasets.fetch_california_housing`
 
 - References
-Pace, R. Kelley and Ronald Barry, Sparse Spatial Autoregressions,
-Statistics and Probability Letters, 33 (1997) 291-297
-
+  Pace, R. Kelley and Ronald Barry, Sparse Spatial Autoregressions,
+  Statistics and Probability Letters, 33 (1997) 291-297
 
 ## Evaluation and Results
 
-
-|Method | R2 Score  | MSE  |
-|-------| ------------- | ------------- |
-|  Filter  MIR - Select Percentile   | 0.58 | 0.56  |
-|  Filter  MIR - Select K Best    |0.56       |  0.59|
-|  Filter  Pearson - Select K Best    |0.52      |  0.63|
-|  Filter  Pandas - Corr    |0.60      |  0.53|
-|  Wrapper - RFE   |0.57     |  0.55|
-|  Wrapper - SFE   |0.54     |  0.59|
-|  Dim. Red - PCA    |0.54      |  0.62|
-
-
+| Method                         | R2 Score | MSE  |
+| ------------------------------ | -------- | ---- |
+| Filter MIR - Select Percentile | 0.58     | 0.56 |
+| Filter MIR - Select K Best     | 0.56     | 0.59 |
+| Filter Pearson - Select K Best | 0.52     | 0.63 |
+| Filter Pandas - Corr           | 0.60     | 0.53 |
+| Wrapper - RFE                  | 0.57     | 0.55 |
+| Wrapper - SFE                  | 0.54     | 0.59 |
+| Dim. Red - PCA                 | 0.54     | 0.62 |
 
 ## Libraries
 
@@ -70,14 +65,11 @@ Statistics and Probability Letters, 33 (1997) 291-297
 
 **Packages:** Sklearn, Matplotlib
 
-
 ## Roadmap
 
 - Research on techniques for Logistic Regression
 
 - Need to check the working internals of various techniques
-
-
 
 ## FAQ
 
@@ -91,11 +83,13 @@ Model Evaluation is a crucial aspect in the development of a system model. When 
 The value of the error ranges from zero to infinity. MSE increases exponentially with an increase in error. A good model will have an MSE value closer to zero, indicating a better goodness of fit to the data.
 
 #### Why we need to focus on Feature Selection techniques?
+
 The aim of feature selection is to maximize relevance and minimize redundancy.
 Feature selection techniques are essential tools for building effective and efficient machine learning models. By strategically selecting the most relevant features, you can enhance model performance, gain better interpretability, improve computational efficiency, and manage data storage requirements.
 The way selected features are structured and represented is critical to both quality of the data and the ability to leverage that data for automated decision-making via machine learning.
 
 #### What are Embedded Methods?
+
 Embedded methods offer a convenient and efficient way to perform feature selection while training the model. They are a valuable tool in your machine learning toolbox, but it's important to consider their dependence on the chosen model and potential limitations in interpretability compared to other feature selection techniques. Embedded methods often involve machine learning models with built-in regularization techniques. Examples are LASSO (L1), Ridge (L2) and Decision Trees.
 
 ## Acknowledgements
@@ -107,6 +101,6 @@ Embedded methods offer a convenient and efficient way to perform feature selecti
 
 For any queries, please send an email (id on github profile)
 
+## License
 
-##  License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
